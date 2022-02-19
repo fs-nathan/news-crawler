@@ -1584,7 +1584,9 @@ class ArticleManager:
                                       'publish_time': article.get_date_string(self._config_manager.get_display_timezone()),
                                       'sapo': article.get_sapo(),
                                       'id': article.get_id(),
-                                      'feature_image': article.get_all_image()
+                                      'feature_image': article.get_all_image(),
+                                      'content': article.get_content_as_string(),
+                                      'html-content': article.get_content_as_html()
                                      })
         return json_article_list
 
